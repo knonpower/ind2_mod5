@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block sidebar %}
+    <img src="{% static 'app_miproyecto/img/homero.jpg' %}" alt="">
+{% endblock sidebar %}
+
+{% block articulo %}
+    {% for clave, valor in diccionario.items %}
+        <ul>
+            <li>
+                {{clave}} --> {{valor}}
+            </li>
+        </ul> 
+    {% endfor %}
+{% endblock articulo %}
